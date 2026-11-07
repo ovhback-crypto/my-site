@@ -51,7 +51,7 @@
         .card { background: rgba(10, 20, 35, 0.7); border-radius: 16px; padding: 24px; width: 100%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         .profile-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
         
-        /* ИСПРАВЛЕНА АВАТАРКА НА PNG */
+        /* АВАТАРКА (PNG) */
         .avatar { 
             width: 72px; height: 72px; border-radius: 50%; 
             background-image: url('avatar.png'); 
@@ -161,7 +161,6 @@
             <div class="music-player">
                 <div class="album-art"></div>
                 <div class="player-info">
-                    <!-- ИЗМЕНЕНО НАЗВАНИЕ -->
                     <h4>6arelyhuman, MISS LUXURY - So Perfect (Official Audio)</h4>
                     <div class="progress-bar">
                         <span id="current-time">0:00</span>
@@ -175,7 +174,8 @@
                 <div class="controls">
                     <div class="volume-container">
                         <svg id="volume-icon" viewBox="0 0 24 24"><path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/></svg>
-                        <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.4">
+                        <!-- ГРОМКОСТЬ 25% -->
+                        <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.25">
                     </div>
                     <svg id="play-pause" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
@@ -183,6 +183,7 @@
         </div>
     </div>
 
+    <!-- ЛОКАЛЬНАЯ МУЗЫКА -->
     <audio id="audio-player" src="music.mp3" loop></audio>
 
     <script>
@@ -223,7 +224,9 @@
             introScreen.classList.add('intro-hidden');
             mainSite.classList.add('active');
             videoContainer.classList.add('visible');
-            audio.volume = 0.4;
+            
+            // ГРОМКОСТЬ 25% ПРИ СТАРТЕ
+            audio.volume = 0.25;
             audio.play().then(() => updatePlayIcon()).catch(e => console.log(e));
         });
 
