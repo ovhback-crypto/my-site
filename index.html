@@ -51,10 +51,10 @@
         .card { background: rgba(10, 20, 35, 0.7); border-radius: 16px; padding: 24px; width: 100%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
         .profile-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
         
-        /* ЛОКАЛЬНАЯ АВАТАРКА */
+        /* ИСПРАВЛЕНА АВАТАРКА НА PNG */
         .avatar { 
             width: 72px; height: 72px; border-radius: 50%; 
-            background-image: url('avatar.jpg'); /* Берет файл из папки */
+            background-image: url('avatar.png'); 
             background-size: cover; background-position: center; 
             border: 2px solid #fff; box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
         }
@@ -76,14 +76,7 @@
         
         .music-wrapper { width: 100%; max-width: 600px; border-radius: 14px; padding: 1px; margin-top: 20px; background: linear-gradient(90deg, rgba(255, 60, 60, 0.4), rgba(60, 255, 100, 0.4)); }
         .music-player { background: rgba(10, 20, 35, 0.8); border-radius: 13px; padding: 12px 16px; display: flex; align-items: center; gap: 16px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-        
-        /* ЛОКАЛЬНАЯ ОБЛОЖКА */
-        .album-art { 
-            width: 48px; height: 48px; border-radius: 8px; 
-            background-image: url('album.jpg'); /* Берет файл из папки */
-            background-size: cover; border: 1px solid rgba(255,255,255,0.3); 
-        }
-        
+        .album-art { width: 48px; height: 48px; border-radius: 8px; background-image: url('album.jpg'); background-size: cover; border: 1px solid rgba(255,255,255,0.3); }
         .player-info { flex: 1; overflow: hidden; }
         .player-info h4 { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .progress-bar { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 10px; color: #ccc; }
@@ -168,7 +161,8 @@
             <div class="music-player">
                 <div class="album-art"></div>
                 <div class="player-info">
-                    <h4>Alan Walker - Headlights (feat. KIDDO)</h4>
+                    <!-- ИЗМЕНЕНО НАЗВАНИЕ -->
+                    <h4>6arelyhuman, MISS LUXURY - So Perfect (Official Audio)</h4>
                     <div class="progress-bar">
                         <span id="current-time">0:00</span>
                         <div class="progress-track" id="progress-bar">
